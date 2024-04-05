@@ -8,7 +8,7 @@ model = T5ForConditionalGeneration.from_pretrained(CKPT)
 
 test_data = load_dataset('wikisql', split='test')
 
-def translate_to_sql(text):
+def tokenize(text):
     inputs = tokenizer(text, padding='longest', max_length=64, return_tensors='pt')
     input_ids = inputs.input_ids
     attention_mask = inputs.attention_mask
@@ -17,6 +17,6 @@ def translate_to_sql(text):
     return tokenizer.decode(output[0], skip_special_tokens=True)
 
 def text2SQL(natural_language_query):
-    text =  "translate to SQL: " + natural_language_query
-    sql_query = translate_to_sql(text)
+    natural_language_query =  "translate to SQL: " + natural_language_query
+    sql_query = tokenize(natural_language_query)
     return sql_query
