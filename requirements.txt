@@ -1,2 +1,14 @@
-datasets
-transformers
+transformers==4.38.2
+filelock
+huggingface-hub
+numpy
+packaging
+pyyaml
+regex
+requests
+safetensors
+tokenizers
+tqdm
+torch
+torchvision
+torchaudio
