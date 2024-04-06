@@ -12,3 +12,5 @@ tqdm
 torch
 torchvision
 torchaudio
+flask
+flask_cors

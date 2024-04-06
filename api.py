@@ -1,12 +1,9 @@
-from datasets import load_dataset
 from transformers import AutoTokenizer, T5ForConditionalGeneration
 
-CKPT = '/path/tp/transformer_model'
+CKPT = 'transformer_model'
 
 tokenizer = AutoTokenizer.from_pretrained(CKPT)
 model = T5ForConditionalGeneration.from_pretrained(CKPT)
-
-test_data = load_dataset('wikisql', split='test')
 
 def tokenize(text):
     inputs = tokenizer(text, padding='longest', max_length=64, return_tensors='pt')
