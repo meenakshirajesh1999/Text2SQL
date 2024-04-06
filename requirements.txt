@@ -14,3 +14,4 @@ torchvision
 torchaudio
 flask
 flask_cors
+nltk
