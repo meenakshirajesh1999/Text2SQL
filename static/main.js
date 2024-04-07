@@ -11,12 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     else {
       const query = document.querySelector('#query').value;
+      const schema = document.querySelector('#database-schema').value;
       fetch('/query', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ query }),
+        body: JSON.stringify({ query, schema }),
       })
       .then(response => response.json())
       .then((data) => {

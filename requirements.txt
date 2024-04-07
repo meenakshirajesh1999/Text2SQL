@@ -1,4 +1,4 @@
-transformers==4.38.2
+transformers[torch]
 filelock
 huggingface-hub
 numpy
@@ -15,3 +15,4 @@ torchaudio
 flask
 flask_cors
 nltk
+sqlalchemy

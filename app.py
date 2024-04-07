@@ -12,11 +12,12 @@ def index():
 @app.route('/query', methods=['POST'])
 def chat():
     # Process user input and interact with your chatbot/GPT-2 model
-    user_input = request.json.get('query')
+    user_input = request.json.get('query', "")
+    schema = request.json.get('schema', "")
     if user_input is None:
         return 'Please provide a query', 400
     
-    response = text2SQL(user_input)
+    response = text2SQL(schema, user_input)
     
     return jsonify({'response': response})
 
