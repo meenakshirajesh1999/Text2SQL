@@ -1,4 +1,5 @@
-#Text2SQL: Natural Language to SQL Query Generation
+# Text2SQL: Natural Language to SQL Query Generation
+
 Text2SQL is a natural language processing (NLP) task aimed at automatically generating SQL queries from human-readable text. This project focuses on developing a system architecture and algorithms to facilitate seamless conversion of natural language queries into structured SQL queries. The system comprises both frontend and backend components, ensuring efficient communication, enhanced security, and robust query generation.
 
 #Objective
